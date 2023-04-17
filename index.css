@@ -1,0 +1,137 @@
+.header-wrapper {
+    border: 1px solid grey;
+    display: flex;
+    justify-content: flex-end;
+    border-left: none;
+    border-right: none;
+    margin: 0 10px 0 10px;
+}
+.header-wrapper > div {
+    padding: 2px 0px 2px 0px;
+    text-align: center;
+    font-size: 12sp;
+    color: black;
+    border: 1px solid;
+    margin: 5px 0 5px 0;
+    width: 100px;
+    height: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+.logo {
+    cursor: pointer;
+    margin-right: 850px;
+    width: 40px;
+    height: 40px;
+}
+h1 {
+    margin-left: 50px;
+}
+p {
+    margin-left: 50px;
+}
+.imgslide-section {
+    width: 1366px;
+    height: 578px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+    .menu {
+        width: 100%;
+        flex-direction: column;
+    }    
+}
+button {
+    margin: 20px 0 20px 0;
+}
+.img-facilitation {
+    display: flex;
+    flex: 1;
+}
+.teacher {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: solid 2px;
+}
+.field {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: solid 2px;
+}
+.class {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: solid 2px;
+}
+section {
+    flex-direction: row;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+}
+content {
+    flex-direction: row;
+    display: flex;
+}
+content > div {
+    display: flex;
+    flex: 1;
+    align-content: left;
+    justify-content: left;
+    margin: 10px 50px 50px 50px;
+}
+.label {
+    display: flex;
+    flex: 1;
+}
+.column-l {
+    width: 100%;
+}
+.label-l {
+    width: 100%;
+}
+.column-p {
+    width: 100px;
+}
+.label-p {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex: 1;
+}
+.column-r {
+    width: 100%;
+} 
+.label-rn {
+    width: 100%;
+}
+.label-rd {
+    width: 100%;
+}
+.laki {
+    width: 100%;
+}
+.perempuan {
+    width: 100%;
+}
+.pesan {
+    width: 100%;
+}
+.btn-submit {
+    flex: 1;
+    width: 100%;
+}
+.form-output {
+    flex-direction: column;
+    border: solid 1px grey;
+}
+footer {
+    text-align: end;
+    padding: 2px 2px 2px 2px;
+}

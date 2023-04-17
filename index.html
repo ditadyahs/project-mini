@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Website </title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+    <body>
+        <header class="header-wrapper">
+            <img class="logo" alt="" src="logo.png"/>
+            <div class="home"> Home </div>
+            <div class="profile"> <a href="profile.html"> Our Profile </a> </div>
+            <div class="achieve"> Achievement </div>
+            <div class="message"> Message Us </div>
+        </header>
+
+        <main class="content">
+            <h1> Hi <span id="nama"> </span>, Welcome to Website </h1>
+            
+            <script>
+                var name = prompt("Masukkan Nama Anda");
+                document.getElementById("nama").innerText = name;
+            </script>
+            <p> Ini adalah website latihan pertama </p>
+            <div>
+                <img class="imgslide-section" src="gambar-1.jpg"/>
+                <img class="imgslide-section" src="gambar-2.jpg"/>
+                <img class="imgslide-section" src="gambar-3.jpg"/>
+                <button onclick="plusDivs(-1)"> Previous </button>
+                <button onclick="plusDivs(1)"> Next </button>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs((slideIndex += n));
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var imgList = document.getElementsByClassName("imgslide-section");
+                    if (n > imgList.length) {slideIndex = 1;}
+                    else if (n < 1) {slideIndex = imgList.length;}
+                    for (i = 0; i < imgList.length; i++) {
+                        imgList[i].style.display = "none";
+                    }
+                    imgList[slideIndex - 1].style.display = "block";
+                }
+                setInterval(() => {
+                    plusDivs[1];
+                }, 1000)
+            </script>
+
+            <section>
+                <h1 class="facilitation"> Our Facilitation </h1>
+            <div class="row">
+                <div class="column">
+                    <div class="img-facilitation">
+                        <div class="row">
+                            <div class="column">
+                                <figure>
+                                    <img class="teacher" src="teacher.jpg"/>
+                                    <figcaption> Professional Teacher </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <figure>           
+                                    <img class="field" src="field.jpg"/>
+                                    <figcaption> Sport Field </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <figure>
+                                    <img class="class" src="classroom.png"/>
+                                    <figcaption> Classroom </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+        
+            <section>
+                <h1 class="message"> Message Us </h1>
+                <content class="message-section">
+                    <div class="row">
+                        <div class="column">
+                            <div class="form-section">
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="formulir">
+                                            <form                     
+                                            id="message-form"
+                                            name="message-form"
+                                            onsubmit="return validateForm()">
+                                                <div class="row">
+                                                    <div class="column-l">
+                                                        <label class="label-l" for="nama"> Nama </label> <br />
+                                                        <label class="label-l" for="tanggal"> Tanggal Lahir </label> <br />
+                                                        <label class="label-l" for="kelamin"> Jenis Kelamin </label> <br />
+                                                        <label class="label-l" for="pesan"> Pesan </label> <br />
+                                                    </div>
+                                                    <div class="column-p">
+                                                        <label class="label-p" for="point-nama"> : </label> <br />
+                                                        <label class="label-p" for="point-tanggal"> : </label> <br />
+                                                        <label class="label-p" for="point-kelamin"> : </label> <br />
+                                                        <label class="label-p" for="point-pesan"> : </label> <br />
+                                                    </div>
+                                                    <div class="column-r">
+                                                        <input class="label-rn" type="text" id="nama" name="nama" placeholder="Nama"> <br />
+                                                        <input class="label-rd" type="date" id="tanggal" name="tanggal"> <br />
+                                                        <input class="radio-k" type="radio" id="laki" name="kelamin" value="Laki-Laki">
+                                                        <label for="laki"> Laki-Laki </label>
+                                                        <input class="radio-k" type="radio" id="perempuan" name="kelamin" value="Perempuan">
+                                                        <label for="perempuan"> Perempuan </label> <br />
+                                                        <textarea rows="4" cols="35" name="pesan" placeholder="Pesan"> </textarea>
+                                                    </div>
+                                                </div>
+                                                <input class="btn-submit" type="submit" value="Submit">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <script>
+                function validateForm() {
+                    var name = document.forms["message-form"]["nama"].value;
+                    var date = document.forms["message-form"]["tanggal"].value;
+                    var kelamin = document.forms["message-form"]["kelamin"].value;
+                    var pesan = document.forms["message-form"]["pesan"].value;
+                    
+                    if (name == '' || date == '' || kelamin == ''|| pesan == '') {
+                        alert('Input tidak boleh kosong');
+                        return false;
+                    }
+                    document.getElementById("sender-nama").innerText = name;
+                    document.getElementById("sender-tanggal").innerText = date;
+                    document.getElementById("sender-kelamin").innerText = kelamin;
+                    document.getElementById("sender-pesan").innerText = pesan;
+                    return false;
+                }
+            </script>
+                <div class="form-output">
+                    <p> Nama: <span id="sender-nama"> </span> </p>
+                    <p> Tanggal Lahir: <span id="sender-tanggal"> </span> </p>
+                    <p> Jenis Kelamin: <span id="sender-kelamin"> </span> </p>
+                    <p> Pesan: <span id="sender-pesan"> </span> </p>
+                </div>
+                </content>
+            </section>
+        </main>
+        <footer class="container">
+            <p> <b> Created by Dita Dyah S </b> </p>
+        </footer>
+    </body>
+</html>

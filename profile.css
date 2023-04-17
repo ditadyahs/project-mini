@@ -1,0 +1,33 @@
+.profile-school {
+    justify-items: center;
+    margin: 10px 50px 50px 50px;
+}
+main {
+    flex-direction: row;
+    display: flex;
+    border-bottom: solid 1px grey;
+}
+main > div {
+    display: flex;
+    flex: 1;
+    align-content: left;
+    justify-content: left;
+    margin: 10px 50px 50px 50px;
+}
+content {
+    flex-direction: row;
+    display: flex;
+}
+content > div {
+    display: flex;
+    flex: 1;
+    align-content: left;
+    justify-content: left;
+    margin: 10px 50px 50px 50px;
+}
+footer {
+    text-align: end;
+    padding: 2px 2px 2px 2px;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+}
